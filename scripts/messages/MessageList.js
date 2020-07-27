@@ -34,3 +34,15 @@ friendListSection.addEventListener("change", changeEvent => {
     }
 })
 
+/*
+    Color the messages when one of the buttons in the ThemeButtons
+    component is clicked.
+*/
+const eventHub = document.querySelector(".container")
+
+eventHub.addEventListener("colorChosen", event => {
+    const color = event.detail.color
+
+    contentTarget.classList = []
+    contentTarget.classList.add(color)
+})
